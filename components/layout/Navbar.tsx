@@ -31,11 +31,19 @@ export default function Navbar() {
         boxShadow: scrolled ? "0 2px 16px rgba(0,140,178,0.08)" : "none",
       }}
     >
-      <div className="max-w-content mx-auto px-6 lg:px-16 flex items-center justify-between h-20">
+      <div
+        className={`max-w-content mx-auto px-6 lg:px-16 flex items-center justify-between transition-all duration-300 ${
+          scrolled ? "h-16" : "h-24"
+        }`}
+      >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="HilDent početna">
+        <Link href="/" className="flex items-center shrink-0" aria-label="HilDent početna">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo.svg" alt="HilDent" className="h-11 w-auto" />
+          <img
+            src="/brand/logo.svg"
+            alt="HilDent"
+            className={`w-auto transition-all duration-300 ${scrolled ? "h-10" : "h-16"}`}
+          />
         </Link>
 
         {/* Desktop nav */}

@@ -281,6 +281,92 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* TOPLINA / ZA CELU PORODICU */}
+      <section className="py-24 relative overflow-hidden" style={{ background: "#fff" }}>
+        <div className="max-w-content mx-auto px-6 lg:px-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Tekst */}
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
+                Za celu porodicu
+              </span>
+              <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "#1A1A1A" }}>
+                Toplina u svakom<br />pregledu
+              </h2>
+              <p className="text-base leading-relaxed mb-6" style={{ color: "#6B6B6B" }}>
+                Od prvog mlečnog zuba do osmeha koji traje ceo život — kod nas su dobrodošli svi uzrasti. Verujemo da dobra stomatologija počinje osećajem sigurnosti, pa gradimo opuštenu i prijatnu atmosferu u kojoj se i najmlađi i najstariji pacijenti osećaju kao kod kuće.
+              </p>
+              <ul className="flex flex-col gap-3">
+                {[
+                  "Nežan i strpljiv pristup deci i anksioznim pacijentima",
+                  "Individualan plan terapije za svakog člana porodice",
+                  "Iskren razgovor i jasna cena — bez iznenađenja",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span
+                      className="mt-1 flex items-center justify-center w-5 h-5 rounded-full shrink-0"
+                      style={{ background: "rgba(112,201,192,0.25)" }}
+                    >
+                      <CheckCircle size={14} style={{ color: "#008cb2" }} />
+                    </span>
+                    <span className="text-sm font-medium" style={{ color: "#2C2C2C" }}>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Kolaž slika */}
+            <div className="relative">
+              <div className="grid grid-cols-2 gap-4">
+                <div className="relative rounded-3xl overflow-hidden aspect-[3/4]" style={{ boxShadow: "var(--shadow-md)" }}>
+                  <Image src="/images/toplina-1.webp" alt="Zadovoljna pacijentkinja Hildent" fill sizes="(max-width:1024px) 50vw, 25vw" className="object-cover" />
+                </div>
+                <div className="relative rounded-3xl overflow-hidden aspect-[3/4] translate-y-8" style={{ boxShadow: "var(--shadow-md)" }}>
+                  <Image src="/images/toplina-3.webp" alt="Nasmejan tim ordinacije Hildent" fill sizes="(max-width:1024px) 50vw, 25vw" className="object-cover" />
+                </div>
+                <div className="relative rounded-3xl overflow-hidden aspect-[16/10] col-span-2 mt-4" style={{ boxShadow: "var(--shadow-md)" }}>
+                  <Image src="/images/toplina-2.webp" alt="Dr Igor Bratić sa timom tokom pregleda" fill sizes="(max-width:1024px) 100vw, 50vw" className="object-cover" />
+                </div>
+              </div>
+              <svg className="absolute -top-4 -left-4 w-8 h-8 animate-sparkle" viewBox="0 0 24 24" fill="#f9a11b">
+                <path d="M12 0C12.9 6.6 17.4 11.1 24 12 17.4 12.9 12.9 17.4 12 24 11.1 17.4 6.6 12.9 0 12 6.6 11.1 11.1 6.6 12 0Z" />
+              </svg>
+            </div>
+          </div>
+
+          {/* Dečiji ugao — Mali istraživači svemira */}
+          <div
+            className="mt-20 rounded-3xl overflow-hidden relative p-8 lg:p-14"
+            style={{ background: "linear-gradient(120deg, #4b53a2 0%, #008cb2 100%)" }}
+          >
+            {/* orbita deko */}
+            <svg className="absolute -right-16 -bottom-20 w-[380px] h-[380px] pointer-events-none" viewBox="0 0 400 400" fill="none" aria-hidden>
+              <g stroke="#ffffff" strokeOpacity="0.18">
+                <ellipse cx="200" cy="200" rx="185" ry="72" transform="rotate(-20 200 200)" strokeWidth="2" />
+                <circle cx="200" cy="200" r="120" strokeWidth="2" strokeDasharray="3 12" />
+              </g>
+            </svg>
+            <svg className="absolute top-8 right-10 w-7 h-7 animate-sparkle pointer-events-none" viewBox="0 0 24 24" fill="#f9a11b" aria-hidden>
+              <path d="M12 0C12.9 6.6 17.4 11.1 24 12 17.4 12.9 12.9 17.4 12 24 11.1 17.4 6.6 12.9 0 12 6.6 11.1 11.1 6.6 12 0Z" />
+            </svg>
+
+            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/brand/planeta-zuta.svg" alt="" aria-hidden className="w-28 h-28 shrink-0 drop-shadow-xl animate-sparkle" />
+              <div className="text-center sm:text-left">
+                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#70c9c0" }}>
+                  Za naše najmlađe
+                </span>
+                <h3 className="text-3xl font-bold text-white mt-2 mb-3">Mali istraživači svemira</h3>
+                <p className="text-base leading-relaxed max-w-2xl" style={{ color: "rgba(255,255,255,0.85)" }}>
+                  Kod nas deca ne strahuju od stolice — pretvaramo pregled u malu svemirsku avanturu na Planeti HilDent. Posle svake uspešne posete, mali istraživač dobija svoju HilDent nalepnicu za hrabrost.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* REVIEWS PREVIEW */}
       <section className="py-24" style={{ background: "#fff" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
