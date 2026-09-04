@@ -198,53 +198,56 @@ export default function HomePage() {
       {/* WHY HILDENT */}
       <section className="py-24" style={{ background: "#F0F8FA" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div
-                className="relative rounded-2xl overflow-hidden aspect-[4/5] mb-8"
-                style={{ boxShadow: "var(--shadow-lg)" }}
-              >
-                <Image
-                  src="/images/dr-igor-bratic.webp"
-                  alt="Dr Igor Bratić u ordinaciji Hildent"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-              </div>
+          <div className="grid lg:grid-cols-2 gap-16 items-stretch">
+            {/* Image — full height */}
+            <div
+              className="relative rounded-2xl overflow-hidden min-h-[420px] lg:min-h-full order-1"
+              style={{ boxShadow: "var(--shadow-lg)" }}
+            >
+              <Image
+                src="/images/dr-igor-bratic.webp"
+                alt="Dr Igor Bratić u ordinaciji Hildent"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+
+            {/* Text + checklist */}
+            <div className="flex flex-col justify-center order-2">
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
                 Zašto Hildent
               </span>
               <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "#1A1A1A" }}>
                 Stomatologija kojoj<br />možete verovati
               </h2>
-              <p className="text-base leading-relaxed mb-8" style={{ color: "#6B6B6B" }}>
+              <p className="text-base leading-relaxed mb-6" style={{ color: "#6B6B6B" }}>
                 Dr Igor Bratić i tim posvećeni su pružanju vrhunske stomatološke zaštite uz korišćenje najsavremenije opreme i individualnog pristupa svakom pacijentu.
               </p>
               <Link
                 href="/o-nama"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5 self-start mb-8"
                 style={{ background: "#0095B6" }}
               >
                 Saznaj više o nama
                 <ArrowRight size={15} />
               </Link>
-            </div>
 
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {whyUs.map((item) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-white"
-                  style={{ boxShadow: "var(--shadow-sm)" }}
-                >
-                  <CheckCircle size={18} className="mt-0.5 shrink-0" style={{ color: "#0095B6" }} />
-                  <span className="text-sm font-medium" style={{ color: "#1A1A1A" }}>
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {whyUs.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 p-4 rounded-xl bg-white"
+                    style={{ boxShadow: "var(--shadow-sm)" }}
+                  >
+                    <CheckCircle size={18} className="mt-0.5 shrink-0" style={{ color: "#0095B6" }} />
+                    <span className="text-sm font-medium" style={{ color: "#1A1A1A" }}>
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
