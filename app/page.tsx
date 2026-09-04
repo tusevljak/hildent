@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Clock, ParkingCircle, Star, ArrowRight, CheckCircle } from "lucide-react";
 import { reviews } from "@/data/reviews";
 
@@ -112,27 +113,40 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-2 gap-5">
-              {[
-                { value: "10+", label: "Godina iskustva" },
-                { value: "5.000+", label: "Zadovoljnih pacijenata" },
-                { value: "10+", label: "Stomatoloških usluga" },
-                { value: "5★", label: "Google recenzije" },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="rounded-xl p-6 flex flex-col gap-1"
-                  style={{ background: "#fff", boxShadow: "0 4px 16px rgba(0,149,182,0.10)" }}
-                >
-                  <span className="text-3xl font-extrabold" style={{ color: "#0095B6" }}>
-                    {s.value}
-                  </span>
-                  <span className="text-sm font-medium" style={{ color: "#6B6B6B" }}>
-                    {s.label}
-                  </span>
-                </div>
-              ))}
+            {/* Hero image + stats */}
+            <div className="relative">
+              <div
+                className="relative rounded-2xl overflow-hidden aspect-[4/5]"
+                style={{ boxShadow: "0 24px 60px rgba(0,149,182,0.25)" }}
+              >
+                <Image
+                  src="/images/dr Igor Bratić.jpg"
+                  alt="Dr Igor Bratić sa asistentkinjom u Hildent ordinaciji"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+
+              <div
+                className="absolute -bottom-6 -left-6 hidden sm:grid grid-cols-2 gap-3 p-4 rounded-xl"
+                style={{ background: "#fff", boxShadow: "0 12px 32px rgba(0,149,182,0.18)" }}
+              >
+                {[
+                  { value: "10+", label: "God. iskustva" },
+                  { value: "5★", label: "Google" },
+                ].map((s) => (
+                  <div key={s.label} className="flex flex-col gap-0.5 px-3">
+                    <span className="text-2xl font-extrabold" style={{ color: "#0095B6" }}>
+                      {s.value}
+                    </span>
+                    <span className="text-xs font-medium" style={{ color: "#6B6B6B" }}>
+                      {s.label}
+                    </span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -186,6 +200,18 @@ export default function HomePage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
+              <div
+                className="relative rounded-2xl overflow-hidden aspect-[4/5] mb-8"
+                style={{ boxShadow: "var(--shadow-lg)" }}
+              >
+                <Image
+                  src="/images/DSCF3888.jpg"
+                  alt="Dr Igor Bratić u ordinaciji Hildent"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
                 Zašto Hildent
               </span>
