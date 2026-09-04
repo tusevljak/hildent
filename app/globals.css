@@ -66,3 +66,13 @@
 .animate-sparkle {
   animation: sparkle 3s ease-in-out infinite;
 }
+
+/* Logo se rastapa u roj zvezdica */
+@keyframes sparkleBurst {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.2) rotate(0deg); }
+  25%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--dx, 0), var(--dy, 0)) scale(1) rotate(120deg); }
+}
+.sparkle-burst {
+  animation: sparkleBurst 0.75s ease-out forwards;
+}

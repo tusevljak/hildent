@@ -57,9 +57,41 @@ export default function Navbar() {
             src="/brand/planeta-plava.svg"
             alt="HilDent"
             className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out ${
-              scrolled ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"
+              scrolled ? "opacity-100 scale-100 delay-200" : "opacity-0 scale-50 pointer-events-none"
             }`}
           />
+
+          {/* Roj zvezdica — prsne kad se logo "rastopi" */}
+          {scrolled && (
+            <div className="absolute inset-0 pointer-events-none" aria-hidden>
+              {[
+                { dx: "-54px", dy: "-16px", size: 16, delay: "0ms",  color: "#f9a11b" },
+                { dx: "48px",  dy: "-28px", size: 12, delay: "40ms", color: "#008cb2" },
+                { dx: "-36px", dy: "26px",  size: 13, delay: "80ms", color: "#f9a11b" },
+                { dx: "60px",  dy: "14px",  size: 10, delay: "60ms", color: "#70c9c0" },
+                { dx: "8px",   dy: "-40px", size: 14, delay: "20ms", color: "#008cb2" },
+                { dx: "30px",  dy: "34px",  size: 11, delay: "100ms", color: "#f9a11b" },
+              ].map((s, i) => (
+                <svg
+                  key={i}
+                  className="sparkle-burst absolute left-1/2 top-1/2"
+                  style={{
+                    width: s.size,
+                    height: s.size,
+                    marginLeft: -s.size / 2,
+                    marginTop: -s.size / 2,
+                    ["--dx" as string]: s.dx,
+                    ["--dy" as string]: s.dy,
+                    animationDelay: s.delay,
+                  }}
+                  viewBox="0 0 24 24"
+                  fill={s.color}
+                >
+                  <path d="M12 0C12.9 6.6 17.4 11.1 24 12 17.4 12.9 12.9 17.4 12 24 11.1 17.4 6.6 12.9 0 12 6.6 11.1 11.1 6.6 12 0Z" />
+                </svg>
+              ))}
+            </div>
+          )}
         </Link>
 
         {/* Desktop nav */}
