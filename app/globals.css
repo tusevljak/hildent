@@ -7,32 +7,36 @@
 @import "@fontsource/fira-sans/800.css";
 
 @theme inline {
-  --color-teal:      #0095B6;
-  --color-orange:    #F5A800;
+  --color-teal:      #008cb2;
+  --color-orange:    #f9a11b;
+  --color-indigo:    #4b53a2;
+  --color-mint:      #70c9c0;
   --color-dark:      #1A1A1A;
   --color-mid:       #2C2C2C;
   --color-muted:     #6B6B6B;
-  --color-border:    #D4EBF0;
-  --color-bg-light:  #F0F8FA;
+  --color-border:    #CCE8EF;
+  --color-bg-light:  #EFF8FA;
   --color-bg-neutral:#F8F8F8;
   --max-width-content: 1200px;
   --font-sans: 'Fira Sans', sans-serif;
 }
 
 :root {
-  --color-brand-teal:    #0095B6;
-  --color-brand-orange:  #F5A800;
+  --color-brand-teal:    #008cb2;
+  --color-brand-orange:  #f9a11b;
+  --color-brand-indigo:  #4b53a2;
+  --color-brand-mint:    #70c9c0;
   --color-white:         #FFFFFF;
   --color-dark:          #1A1A1A;
   --color-mid:           #2C2C2C;
   --color-muted:         #6B6B6B;
-  --color-border:        #D4EBF0;
-  --color-bg-light:      #F0F8FA;
+  --color-border:        #CCE8EF;
+  --color-bg-light:      #EFF8FA;
   --color-bg-neutral:    #F8F8F8;
 
-  --shadow-sm:   0 1px 4px  rgba(0, 149, 182, 0.08);
-  --shadow-md:   0 4px 16px rgba(0, 149, 182, 0.12);
-  --shadow-lg:   0 8px 32px rgba(0, 149, 182, 0.16);
+  --shadow-sm:   0 1px 4px  rgba(0, 140, 178, 0.08);
+  --shadow-md:   0 4px 16px rgba(0, 140, 178, 0.12);
+  --shadow-lg:   0 8px 32px rgba(0, 140, 178, 0.16);
   --shadow-xl:   0 16px 64px rgba(0, 0, 0, 0.12);
 }
 

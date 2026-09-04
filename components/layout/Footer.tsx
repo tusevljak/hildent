@@ -18,9 +18,8 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <div className="text-2xl font-extrabold tracking-tight mb-3" style={{ color: "#0095B6" }}>
-              HILDENT
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/brand/logo.svg" alt="HilDent" className="h-12 w-auto mb-4" />
             <p className="text-sm leading-relaxed" style={{ color: "#9CA3AF" }}>
               Stomatološka ordinacija Dr Igor Bratić. Savremena stomatologija u centru Beograda.
             </p>
@@ -89,17 +88,17 @@ export default function Footer() {
             </h4>
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-2 text-sm" style={{ color: "#9CA3AF" }}>
-                <MapPin size={15} className="mt-0.5 shrink-0" style={{ color: "#0095B6" }} />
+                <MapPin size={15} className="mt-0.5 shrink-0" style={{ color: "#008cb2" }} />
                 Hilandarska 10, Beograd
               </li>
               <li>
                 <a href="tel:+381653223093" className="flex items-center gap-2 text-sm transition-colors hover:text-white" style={{ color: "#9CA3AF" }}>
-                  <Phone size={15} style={{ color: "#0095B6" }} />
+                  <Phone size={15} style={{ color: "#008cb2" }} />
                   +381 65 32 23 093
                 </a>
               </li>
               <li className="flex items-start gap-2 text-sm" style={{ color: "#9CA3AF" }}>
-                <Clock size={15} className="mt-0.5 shrink-0" style={{ color: "#0095B6" }} />
+                <Clock size={15} className="mt-0.5 shrink-0" style={{ color: "#008cb2" }} />
                 <span>Pon–Pet: 09–20h<br />Sub: 09–15h</span>
               </li>
             </ul>
@@ -108,7 +107,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block px-5 py-2.5 rounded-md text-sm font-semibold text-white transition-all hover:-translate-y-0.5"
-              style={{ background: "#F5A800" }}
+              style={{ background: "#f9a11b" }}
             >
               Zakaži online →
             </a>

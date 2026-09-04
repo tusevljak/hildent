@@ -28,18 +28,14 @@ export default function Navbar() {
         background: scrolled ? "rgba(255,255,255,0.97)" : "transparent",
         backdropFilter: scrolled ? "blur(12px)" : "none",
         borderBottom: scrolled ? "1px solid #D4EBF0" : "none",
-        boxShadow: scrolled ? "0 2px 16px rgba(0,149,182,0.08)" : "none",
+        boxShadow: scrolled ? "0 2px 16px rgba(0,140,178,0.08)" : "none",
       }}
     >
       <div className="max-w-content mx-auto px-6 lg:px-16 flex items-center justify-between h-20">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <span
-            className="text-2xl font-extrabold tracking-tight"
-            style={{ color: "#0095B6" }}
-          >
-            HIL<span style={{ color: "#0095B6" }}>D</span>ENT
-          </span>
+        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="HilDent početna">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/brand/logo.svg" alt="HilDent" className="h-11 w-auto" />
         </Link>
 
         {/* Desktop nav */}
@@ -61,7 +57,7 @@ export default function Navbar() {
           <a
             href="tel:+381653223093"
             className="flex items-center gap-2 text-sm font-medium"
-            style={{ color: "#0095B6" }}
+            style={{ color: "#008cb2" }}
           >
             <Phone size={15} />
             065 32 23 093
@@ -71,7 +67,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-md text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5"
-            style={{ background: "#F5A800" }}
+            style={{ background: "#f9a11b" }}
           >
             Zakaži pregled
           </a>
@@ -105,7 +101,7 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 px-5 py-3 rounded-md text-sm font-semibold text-white text-center"
-            style={{ background: "#F5A800" }}
+            style={{ background: "#f9a11b" }}
           >
             Zakaži pregled
           </a>

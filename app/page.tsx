@@ -9,22 +9,22 @@ const featuredServices = [
   {
     title: "Implantologija",
     desc: "Trajno rešenje za nedostajuće zube uz Nobel, Straumann i Alpha implantate.",
-    icon: "🦷",
+    icon: "/brand/planeta-plava.svg",
   },
   {
     title: "Invisalign",
     desc: "Nevidljive ortodontske folije za ravan osmeh – bez aparatića.",
-    icon: "✨",
+    icon: "/brand/planeta-zuta.svg",
   },
   {
     title: "Estetska stomatologija",
     desc: "Beljenje zuba, viniri i fasete za savršen, prirodan osmeh.",
-    icon: "💎",
+    icon: "/brand/planeta-ljubicasta.svg",
   },
   {
     title: "Opšta stomatologija",
     desc: "Preventivni pregledi, plombe, čišćenje i endodoncija.",
-    icon: "🏥",
+    icon: "/brand/planeta-zelena.svg",
   },
 ];
 
@@ -44,22 +44,43 @@ export default function HomePage() {
 
       {/* HERO */}
       <section
-        className="relative min-h-screen flex items-center"
-        style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 60%)" }}
+        className="relative min-h-screen flex items-center overflow-hidden"
+        style={{ background: "linear-gradient(135deg, #EFF8FA 0%, #ffffff 60%)" }}
       >
         <div
           className="absolute top-0 right-0 w-1/2 h-full pointer-events-none"
           style={{
-            background: "linear-gradient(135deg, transparent 40%, rgba(0,149,182,0.06) 100%)",
+            background: "linear-gradient(135deg, transparent 40%, rgba(0,140,178,0.06) 100%)",
           }}
         />
+
+        {/* Planeta motiv — orbite + sjajevi */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden>
+          <svg
+            className="absolute -top-40 -right-40 w-[720px] h-[720px]"
+            viewBox="0 0 400 400"
+            fill="none"
+          >
+            <g stroke="#008cb2" strokeOpacity="0.13">
+              <ellipse cx="200" cy="200" rx="190" ry="74" transform="rotate(-22 200 200)" strokeWidth="1.5" />
+              <ellipse cx="200" cy="200" rx="150" ry="150" strokeWidth="1.5" strokeDasharray="2 10" />
+              <circle cx="200" cy="200" r="96" strokeWidth="1.5" />
+            </g>
+          </svg>
+          <svg className="absolute bottom-24 left-[8%] w-8 h-8 animate-sparkle" viewBox="0 0 24 24" fill="#f9a11b">
+            <path d="M12 0C12.9 6.6 17.4 11.1 24 12 17.4 12.9 12.9 17.4 12 24 11.1 17.4 6.6 12.9 0 12 6.6 11.1 11.1 6.6 12 0Z" />
+          </svg>
+          <svg className="absolute top-[22%] left-[46%] w-5 h-5 animate-sparkle" viewBox="0 0 24 24" fill="#008cb2" fillOpacity="0.4">
+            <path d="M12 0C12.9 6.6 17.4 11.1 24 12 17.4 12.9 12.9 17.4 12 24 11.1 17.4 6.6 12.9 0 12 6.6 11.1 11.1 6.6 12 0Z" />
+          </svg>
+        </div>
 
         <div className="max-w-content mx-auto px-6 lg:px-16 pt-32 pb-20 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <div
                 className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6"
-                style={{ background: "rgba(0,149,182,0.1)", color: "#0095B6" }}
+                style={{ background: "rgba(0,140,178,0.1)", color: "#008cb2" }}
               >
                 Stomatološka ordinacija · Beograd
               </div>
@@ -69,7 +90,7 @@ export default function HomePage() {
                 style={{ fontSize: "clamp(48px, 7vw, 88px)", color: "#1A1A1A" }}
               >
                 Vaš osmeh,{" "}
-                <span style={{ color: "#0095B6" }}>naša</span>{" "}
+                <span style={{ color: "#008cb2" }}>naša</span>{" "}
                 strast.
               </h1>
 
@@ -83,7 +104,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-                  style={{ background: "#F5A800", boxShadow: "0 4px 16px rgba(245,168,0,0.35)" }}
+                  style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(249,161,27,0.35)" }}
                 >
                   Zakaži pregled
                   <ArrowRight size={16} />
@@ -91,7 +112,7 @@ export default function HomePage() {
                 <Link
                   href="/usluge"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold border-2 transition-all hover:-translate-y-0.5"
-                  style={{ borderColor: "#0095B6", color: "#0095B6" }}
+                  style={{ borderColor: "#008cb2", color: "#008cb2" }}
                 >
                   Pogledaj usluge
                 </Link>
@@ -99,15 +120,15 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-4 text-sm" style={{ color: "#6B6B6B" }}>
                 <span className="flex items-center gap-1.5">
-                  <MapPin size={14} style={{ color: "#0095B6" }} />
+                  <MapPin size={14} style={{ color: "#008cb2" }} />
                   Hilandarska 10
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <Phone size={14} style={{ color: "#0095B6" }} />
+                  <Phone size={14} style={{ color: "#008cb2" }} />
                   065 32 23 093
                 </span>
                 <span className="flex items-center gap-1.5">
-                  <ParkingCircle size={14} style={{ color: "#0095B6" }} />
+                  <ParkingCircle size={14} style={{ color: "#008cb2" }} />
                   Obezbeđen parking
                 </span>
               </div>
@@ -115,9 +136,16 @@ export default function HomePage() {
 
             {/* Hero image + stats */}
             <div className="relative">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/brand/planeta-plava.svg"
+                alt=""
+                aria-hidden
+                className="absolute -top-8 -right-6 w-24 h-24 z-20 drop-shadow-lg animate-sparkle hidden sm:block"
+              />
               <div
                 className="relative rounded-2xl overflow-hidden aspect-[4/5]"
-                style={{ boxShadow: "0 24px 60px rgba(0,149,182,0.25)" }}
+                style={{ boxShadow: "0 24px 60px rgba(0,140,178,0.25)" }}
               >
                 <Image
                   src="/images/naslovna-1.webp"
@@ -131,14 +159,14 @@ export default function HomePage() {
 
               <div
                 className="absolute -bottom-6 -left-6 hidden sm:grid grid-cols-2 gap-3 p-4 rounded-xl"
-                style={{ background: "#fff", boxShadow: "0 12px 32px rgba(0,149,182,0.18)" }}
+                style={{ background: "#fff", boxShadow: "0 12px 32px rgba(0,140,178,0.18)" }}
               >
                 {[
                   { value: "10+", label: "God. iskustva" },
                   { value: "5★", label: "Google" },
                 ].map((s) => (
                   <div key={s.label} className="flex flex-col gap-0.5 px-3">
-                    <span className="text-2xl font-extrabold" style={{ color: "#0095B6" }}>
+                    <span className="text-2xl font-extrabold" style={{ color: "#008cb2" }}>
                       {s.value}
                     </span>
                     <span className="text-xs font-medium" style={{ color: "#6B6B6B" }}>
@@ -156,7 +184,7 @@ export default function HomePage() {
       <section className="py-24" style={{ background: "#fff" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
               Šta nudimo
             </span>
             <h2 className="text-4xl font-bold mt-2" style={{ color: "#1A1A1A" }}>
@@ -168,10 +196,11 @@ export default function HomePage() {
             {featuredServices.map((s) => (
               <div
                 key={s.title}
-                className="rounded-xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
-                style={{ background: "#F0F8FA", boxShadow: "var(--shadow-sm)" }}
+                className="rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                style={{ background: "#EFF8FA", boxShadow: "var(--shadow-sm)" }}
               >
-                <div className="text-3xl mb-4">{s.icon}</div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={s.icon} alt="" aria-hidden className="w-16 h-16 mb-4" />
                 <h3 className="font-semibold text-base mb-2" style={{ color: "#1A1A1A" }}>
                   {s.title}
                 </h3>
@@ -186,7 +215,7 @@ export default function HomePage() {
             <Link
               href="/usluge"
               className="inline-flex items-center gap-2 font-semibold text-sm transition-colors hover:underline"
-              style={{ color: "#0095B6" }}
+              style={{ color: "#008cb2" }}
             >
               Pogledaj sve usluge i cenovnik
               <ArrowRight size={15} />
@@ -215,7 +244,7 @@ export default function HomePage() {
 
             {/* Text + checklist */}
             <div className="flex flex-col justify-center order-2">
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Zašto Hildent
               </span>
               <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "#1A1A1A" }}>
@@ -227,7 +256,7 @@ export default function HomePage() {
               <Link
                 href="/o-nama"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5 self-start mb-8"
-                style={{ background: "#0095B6" }}
+                style={{ background: "#008cb2" }}
               >
                 Saznaj više o nama
                 <ArrowRight size={15} />
@@ -240,7 +269,7 @@ export default function HomePage() {
                     className="flex items-start gap-3 p-4 rounded-xl bg-white"
                     style={{ boxShadow: "var(--shadow-sm)" }}
                   >
-                    <CheckCircle size={18} className="mt-0.5 shrink-0" style={{ color: "#0095B6" }} />
+                    <CheckCircle size={18} className="mt-0.5 shrink-0" style={{ color: "#008cb2" }} />
                     <span className="text-sm font-medium" style={{ color: "#1A1A1A" }}>
                       {item}
                     </span>
@@ -257,7 +286,7 @@ export default function HomePage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Iskustva pacijenata
               </span>
               <h2 className="text-4xl font-bold mt-2" style={{ color: "#1A1A1A" }}>
@@ -267,7 +296,7 @@ export default function HomePage() {
             <Link
               href="/recenzije"
               className="text-sm font-semibold flex items-center gap-1 hover:underline"
-              style={{ color: "#0095B6" }}
+              style={{ color: "#008cb2" }}
             >
               Sve recenzije <ArrowRight size={14} />
             </Link>
@@ -282,7 +311,7 @@ export default function HomePage() {
               >
                 <div className="flex gap-0.5 mb-3">
                   {Array.from({ length: r.rating }).map((_, i) => (
-                    <Star key={i} size={14} fill="#F5A800" style={{ color: "#F5A800" }} />
+                    <Star key={i} size={14} fill="#f9a11b" style={{ color: "#f9a11b" }} />
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed mb-4" style={{ color: "#2C2C2C" }}>
@@ -291,7 +320,7 @@ export default function HomePage() {
                 <div>
                   <p className="text-sm font-semibold" style={{ color: "#1A1A1A" }}>{r.name}</p>
                   {r.service && (
-                    <p className="text-xs mt-0.5" style={{ color: "#0095B6" }}>{r.service}</p>
+                    <p className="text-xs mt-0.5" style={{ color: "#008cb2" }}>{r.service}</p>
                   )}
                 </div>
               </div>
@@ -301,7 +330,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-20" style={{ background: "#0095B6" }}>
+      <section className="py-20" style={{ background: "#008cb2" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Vaš osmeh zaslužuje pažnju
@@ -315,7 +344,7 @@ export default function HomePage() {
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-              style={{ background: "#F5A800", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}
+              style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}
             >
               Zakaži online →
             </a>
