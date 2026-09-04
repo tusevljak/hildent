@@ -1,8 +1,10 @@
 "use client";
+import OrbitDecor from "@/components/OrbitDecor";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { serviceCategories } from "@/data/services";
+import Image from "next/image";
 import { ChevronDown, ChevronUp, ArrowRight, Clock } from "lucide-react";
 
 function formatPrice(price: number) {
@@ -109,29 +111,47 @@ export default function UslugePage() {
 
       {/* HERO */}
       <section
-        className="pt-40 pb-24"
+        className="pt-40 pb-24 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 70%)" }}
       >
+        <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
-            Cenovnik i usluge
-          </span>
-          <h1
-            className="font-extrabold mt-2 mb-6 leading-tight"
-            style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
-          >
-            Sve što vaši<br />
-            <span style={{ color: "#0095B6" }}>zubi trebaju</span>
-          </h1>
-          <p className="text-lg font-light leading-relaxed max-w-2xl mb-8" style={{ color: "#6B6B6B" }}>
-            Od preventivnih pregleda do kompleksnih hirurških zahvata – pružamo kompletnu stomatološku zaštitu pod jednim krovom. Transparentni cenovnik, bez skrivenih troškova.
-          </p>
-          <div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm"
-            style={{ background: "rgba(245,168,0,0.1)", color: "#D98F00" }}
-          >
-            <Clock size={14} />
-            Cene su informativne. Tačna cena se utvrđuje na pregledu.
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+                Cenovnik i usluge
+              </span>
+              <h1
+                className="font-extrabold mt-2 mb-6 leading-tight"
+                style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
+              >
+                Sve što vaši<br />
+                <span style={{ color: "#0095B6" }}>zubi trebaju</span>
+              </h1>
+              <p className="text-lg font-light leading-relaxed mb-8" style={{ color: "#6B6B6B" }}>
+                Od preventivnih pregleda do kompleksnih hirurških zahvata – pružamo kompletnu stomatološku zaštitu pod jednim krovom. Transparentni cenovnik, bez skrivenih troškova.
+              </p>
+              <div
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm"
+                style={{ background: "rgba(245,168,0,0.1)", color: "#D98F00" }}
+              >
+                <Clock size={14} />
+                Cene su informativne. Tačna cena se utvrđuje na pregledu.
+              </div>
+            </div>
+            <div
+              className="relative rounded-2xl overflow-hidden aspect-[4/5]"
+              style={{ boxShadow: "var(--shadow-lg)" }}
+            >
+              <Image
+                src="/images/FUJI6433.jpg"
+                alt="Estetska stomatologija — odabir nijanse zuba"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
         </div>
       </section>

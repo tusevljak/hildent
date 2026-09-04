@@ -1,7 +1,9 @@
+import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { blogPosts } from "@/data/blog-posts";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Clock, Tag } from "lucide-react";
 import { notFound } from "next/navigation";
 
@@ -24,9 +26,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <Navbar />
 
       <section
-        className="pt-40 pb-16"
+        className="pt-40 pb-16 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 70%)" }}
       >
+        <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <Link
             href="/blog"
@@ -66,10 +69,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       <section className="py-16" style={{ background: "#fff" }}>
         <div className="max-w-3xl mx-auto px-6 lg:px-16">
           <div
-            className="rounded-2xl h-64 flex items-center justify-center mb-10"
-            style={{ background: "#F0F8FA" }}
+            className="relative rounded-2xl overflow-hidden mb-10"
+            style={{ aspectRatio: "16/9", boxShadow: "var(--shadow-md)" }}
           >
-            <span className="text-6xl">🦷</span>
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              sizes="(max-width: 768px) 100vw, 768px"
+              className="object-cover"
+              priority
+            />
           </div>
 
           <p className="text-lg leading-relaxed mb-6" style={{ color: "#2C2C2C" }}>

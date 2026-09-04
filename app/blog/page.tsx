@@ -1,7 +1,9 @@
+import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { blogPosts } from "@/data/blog-posts";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Clock, Tag } from "lucide-react";
 
 function formatDate(dateStr: string) {
@@ -16,9 +18,10 @@ export default function BlogPage() {
 
       {/* HERO */}
       <section
-        className="pt-40 pb-24"
+        className="pt-40 pb-24 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 70%)" }}
       >
+        <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
             Saveti i novosti
@@ -46,12 +49,14 @@ export default function BlogPage() {
                 className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 group"
                 style={{ background: "#fff", boxShadow: "var(--shadow-sm)", border: "1px solid #D4EBF0" }}
               >
-                {/* Image placeholder */}
-                <div
-                  className="h-48 flex items-center justify-center"
-                  style={{ background: "#F0F8FA" }}
-                >
-                  <span className="text-4xl">🦷</span>
+                <div className="relative h-48 overflow-hidden" style={{ background: "#F0F8FA" }}>
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                 </div>
 
                 <div className="p-6">

@@ -1,6 +1,8 @@
+import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { reviews } from "@/data/reviews";
+import Image from "next/image";
 import { Star, ExternalLink } from "lucide-react";
 
 function formatDate(dateStr: string) {
@@ -15,20 +17,38 @@ export default function RecenzijePage() {
 
       {/* HERO */}
       <section
-        className="pt-40 pb-24"
+        className="pt-40 pb-24 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 70%)" }}
       >
+        <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
-            Iskustva pacijenata
-          </span>
-          <h1
-            className="font-extrabold mt-2 mb-6 leading-tight"
-            style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
-          >
-            Šta kažu naši<br />
-            <span style={{ color: "#0095B6" }}>pacijenti</span>
-          </h1>
+          <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center mb-4">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+                Iskustva pacijenata
+              </span>
+              <h1
+                className="font-extrabold mt-2 mb-6 leading-tight"
+                style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
+              >
+                Šta kažu naši<br />
+                <span style={{ color: "#0095B6" }}>pacijenti</span>
+              </h1>
+            </div>
+            <div
+              className="relative rounded-2xl overflow-hidden aspect-[4/5]"
+              style={{ boxShadow: "var(--shadow-lg)" }}
+            >
+              <Image
+                src="/images/FUJI6461.jpg"
+                alt="Zadovoljna pacijentkinja nakon tretmana u Hildent ordinaciji"
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
 
           {/* Overall rating */}
           <div className="flex flex-wrap items-center gap-6">

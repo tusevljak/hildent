@@ -1,6 +1,8 @@
+import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, CheckCircle, MapPin, Phone } from "lucide-react";
 
 const values = [
@@ -29,23 +31,41 @@ export default function ONamaPage() {
 
       {/* HERO */}
       <section
-        className="pt-40 pb-24"
+        className="pt-40 pb-24 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 70%)" }}
       >
+        <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
-            Ko smo mi
-          </span>
-          <h1
-            className="font-extrabold mt-2 mb-6 leading-tight"
-            style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
-          >
-            Hildent –<br />
-            <span style={{ color: "#0095B6" }}>Stomatologija sa dušom</span>
-          </h1>
-          <p className="text-lg font-light leading-relaxed max-w-2xl" style={{ color: "#6B6B6B" }}>
-            Hildent stomatološka ordinacija otvorena je sa jednom misijom: pružiti svakom pacijentu onaj nivo brige koji bi poželeli za svoju porodicu. Smestili smo se u centru Beograda, na Hilandarskoj 10, kako bismo bili dostupni svima.
-          </p>
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+                Ko smo mi
+              </span>
+              <h1
+                className="font-extrabold mt-2 mb-6 leading-tight"
+                style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
+              >
+                Hildent –<br />
+                <span style={{ color: "#0095B6" }}>Stomatologija sa dušom</span>
+              </h1>
+              <p className="text-lg font-light leading-relaxed" style={{ color: "#6B6B6B" }}>
+                Hildent stomatološka ordinacija otvorena je sa jednom misijom: pružiti svakom pacijentu onaj nivo brige koji bi poželeli za svoju porodicu. Smestili smo se u centru Beograda, na Hilandarskoj 10, kako bismo bili dostupni svima.
+              </p>
+            </div>
+            <div
+              className="relative rounded-2xl overflow-hidden aspect-[4/3]"
+              style={{ boxShadow: "var(--shadow-lg)" }}
+            >
+              <Image
+                src="/images/DSCF3900.jpg"
+                alt="Hildent tim sa pacijentom u ordinaciji"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -53,20 +73,19 @@ export default function ONamaPage() {
       <section className="py-24" style={{ background: "#fff" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Photo placeholder */}
+            {/* Dr Bratić portret */}
             <div
-              className="rounded-2xl overflow-hidden aspect-[3/4] flex items-center justify-center"
-              style={{ background: "#F0F8FA", boxShadow: "var(--shadow-lg)" }}
+              className="relative rounded-2xl overflow-hidden aspect-[3/4]"
+              style={{ boxShadow: "var(--shadow-lg)" }}
             >
-              <div className="text-center p-10">
-                <div className="text-6xl mb-4">👨‍⚕️</div>
-                <p className="text-sm font-medium" style={{ color: "#0095B6" }}>
-                  Dr Igor Bratić
-                </p>
-                <p className="text-xs mt-1" style={{ color: "#6B6B6B" }}>
-                  Fotografija uskoro
-                </p>
-              </div>
+              <Image
+                src="/images/DSCF3888.jpg"
+                alt="Dr Igor Bratić — specijalista stomatologije, Hildent Beograd"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
             </div>
 
             <div>
@@ -110,6 +129,40 @@ export default function ONamaPage() {
                 Zakaži pregled
                 <ArrowRight size={15} />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TEAM PHOTO */}
+      <section className="py-24" style={{ background: "#fff" }}>
+        <div className="max-w-content mx-auto px-6 lg:px-16">
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-16 items-center">
+            <div
+              className="relative rounded-2xl overflow-hidden aspect-[3/4]"
+              style={{ boxShadow: "var(--shadow-lg)" }}
+            >
+              <Image
+                src="/images/DSCF2558.jpg"
+                alt="Hildent tim — Dr Igor Bratić i asistentkinja sa pacijentom"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+                Naš tim
+              </span>
+              <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "#1A1A1A" }}>
+                Ljudi iza osmeha
+              </h2>
+              <p className="text-base leading-relaxed mb-4" style={{ color: "#6B6B6B" }}>
+                Iza svakog uspešnog zahvata stoji posvećen tim. U Hildentu pacijent nije broj — svakog gosta dočekujemo po imenu, sa osmehom i pažnjom koju zaslužuje.
+              </p>
+              <p className="text-base leading-relaxed" style={{ color: "#6B6B6B" }}>
+                Asistentski tim ima višegodišnje iskustvo u savremenoj stomatologiji i pruža podršku od trenutka zakazivanja do završetka terapije.
+              </p>
             </div>
           </div>
         </div>

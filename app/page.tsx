@@ -1,5 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import OrbitDecor from "@/components/OrbitDecor";
 import Link from "next/link";
 import Image from "next/image";
 import { MapPin, Phone, Clock, ParkingCircle, Star, ArrowRight, CheckCircle } from "lucide-react";
@@ -181,8 +182,9 @@ export default function HomePage() {
       </section>
 
       {/* FEATURED SERVICES */}
-      <section className="py-24" style={{ background: "#fff" }}>
-        <div className="max-w-content mx-auto px-6 lg:px-16">
+      <section className="py-24 relative overflow-hidden" style={{ background: "#fff" }}>
+        <OrbitDecor className="top-[-160px] right-[-160px] w-[560px] h-[560px]" />
+        <div className="max-w-content mx-auto px-6 lg:px-16 relative z-10">
           <div className="mb-12">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
               Šta nudimo
@@ -368,8 +370,9 @@ export default function HomePage() {
       </section>
 
       {/* REVIEWS PREVIEW */}
-      <section className="py-24" style={{ background: "#fff" }}>
-        <div className="max-w-content mx-auto px-6 lg:px-16">
+      <section className="py-24 relative overflow-hidden" style={{ background: "#fff" }}>
+        <OrbitDecor flip className="bottom-[-180px] left-[-160px] w-[540px] h-[540px]" />
+        <div className="max-w-content mx-auto px-6 lg:px-16 relative z-10">
           <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
@@ -416,8 +419,10 @@ export default function HomePage() {
       </section>
 
       {/* CTA BANNER */}
-      <section className="py-20" style={{ background: "#008cb2" }}>
-        <div className="max-w-content mx-auto px-6 lg:px-16 text-center">
+      <section className="py-20 relative overflow-hidden" style={{ background: "#008cb2" }}>
+        <OrbitDecor tone="white" className="top-[-140px] right-[-120px] w-[440px] h-[440px]" />
+        <OrbitDecor tone="white" flip className="bottom-[-160px] left-[-120px] w-[440px] h-[440px]" />
+        <div className="max-w-content mx-auto px-6 lg:px-16 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Vaš osmeh zaslužuje pažnju
           </h2>

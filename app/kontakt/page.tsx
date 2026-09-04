@@ -1,7 +1,9 @@
 "use client";
+import OrbitDecor from "@/components/OrbitDecor";
 import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
 import { MapPin, Phone, Clock, ParkingCircle, Send } from "lucide-react";
 
 function InstagramIcon({ size = 18 }: { size?: number }) {
@@ -44,23 +46,41 @@ export default function KontaktPage() {
 
       {/* HERO */}
       <section
-        className="pt-40 pb-24"
+        className="pt-40 pb-24 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #F0F8FA 0%, #ffffff 70%)" }}
       >
+        <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
-            Stupite u kontakt
-          </span>
-          <h1
-            className="font-extrabold mt-2 mb-4 leading-tight"
-            style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
-          >
-            Kontaktirajte<br />
-            <span style={{ color: "#0095B6" }}>nas</span>
-          </h1>
-          <p className="text-lg font-light leading-relaxed max-w-xl" style={{ color: "#6B6B6B" }}>
-            Tu smo za sva vaša pitanja, konsultacije i zakazivanje. Odgovaramo u najkraćem mogućem roku.
-          </p>
+          <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+                Stupite u kontakt
+              </span>
+              <h1
+                className="font-extrabold mt-2 mb-4 leading-tight"
+                style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
+              >
+                Kontaktirajte<br />
+                <span style={{ color: "#0095B6" }}>nas</span>
+              </h1>
+              <p className="text-lg font-light leading-relaxed" style={{ color: "#6B6B6B" }}>
+                Tu smo za sva vaša pitanja, konsultacije i zakazivanje. Odgovaramo u najkraćem mogućem roku.
+              </p>
+            </div>
+            <div
+              className="relative rounded-2xl overflow-hidden aspect-[4/3]"
+              style={{ boxShadow: "var(--shadow-lg)" }}
+            >
+              <Image
+                src="/images/DSCF3910.jpg"
+                alt="Hildent ordinacija — tim u radu"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </section>
 
