@@ -120,7 +120,7 @@ export default function HomePage() {
                 style={{ boxShadow: "0 24px 60px rgba(0,149,182,0.25)" }}
               >
                 <Image
-                  src="/images/dr-igor-bratic.jpg"
+                  src="/images/naslovna-1.webp"
                   alt="Dr Igor Bratić sa asistentkinjom u Hildent ordinaciji"
                   fill
                   priority
@@ -205,7 +205,7 @@ export default function HomePage() {
                 style={{ boxShadow: "var(--shadow-lg)" }}
               >
                 <Image
-                  src="/images/DSCF3888.jpg"
+                  src="/images/dr-igor-bratic.webp"
                   alt="Dr Igor Bratić u ordinaciji Hildent"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
