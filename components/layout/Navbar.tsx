@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       <div
         className={`max-w-content mx-auto px-6 lg:px-16 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "h-16" : "h-24"
+          scrolled ? "h-20" : "h-32"
         }`}
       >
         {/* Logo */}
@@ -42,7 +42,7 @@ export default function Navbar() {
           <img
             src="/brand/logo.svg"
             alt="HilDent"
-            className={`w-auto transition-all duration-300 ${scrolled ? "h-10" : "h-16"}`}
+            className={`w-auto transition-all duration-300 ${scrolled ? "h-12" : "h-24"}`}
           />
         </Link>
 
