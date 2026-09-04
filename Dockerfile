@@ -1,7 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM node:22-alpine AS base
-RUN apk add --no-cache libc6-compat
+FROM node:22-slim AS base
 
 # --- deps ---
 FROM base AS deps
@@ -25,7 +24,7 @@ ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 ENV HOSTNAME=0.0.0.0
 
-RUN addgroup -g 1001 -S nodejs && adduser -S nextjs -u 1001
+RUN groupadd -g 1001 nodejs && useradd -u 1001 -g nodejs -m nextjs
 
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
