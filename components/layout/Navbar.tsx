@@ -33,16 +33,32 @@ export default function Navbar() {
     >
       <div
         className={`max-w-content mx-auto px-6 lg:px-16 flex items-center justify-between transition-all duration-300 ${
-          scrolled ? "h-20" : "h-32"
+          scrolled ? "h-20" : "h-36"
         }`}
       >
-        {/* Logo */}
-        <Link href="/" className="flex items-center shrink-0" aria-label="HilDent početna">
+        {/* Logo — wordmark na vrhu, na scroll se pretapa u planeta-ikonicu */}
+        <Link
+          href="/"
+          aria-label="HilDent početna"
+          className={`relative shrink-0 transition-all duration-500 ease-out ${
+            scrolled ? "h-12 w-12" : "h-28 w-[210px]"
+          }`}
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/brand/logo.svg"
             alt="HilDent"
-            className={`w-auto transition-all duration-300 ${scrolled ? "h-12" : "h-24"}`}
+            className={`absolute inset-0 h-full w-auto object-contain object-left transition-all duration-500 ease-out ${
+              scrolled ? "opacity-0 scale-90 pointer-events-none" : "opacity-100 scale-100"
+            }`}
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/brand/planeta-plava.svg"
+            alt="HilDent"
+            className={`absolute inset-0 h-full w-full object-contain transition-all duration-500 ease-out ${
+              scrolled ? "opacity-100 scale-100" : "opacity-0 scale-50 pointer-events-none"
+            }`}
           />
         </Link>
 
