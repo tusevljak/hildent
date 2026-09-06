@@ -5,6 +5,7 @@ export interface BlogPost {
   date: string;
   category: string;
   readTime: number;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -15,6 +16,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-01-15",
     category: "Prevencija",
     readTime: 5,
+    image: "/images/FUJI6481.jpg",
   },
   {
     slug: "invisalign-sta-je-i-za-koga",
@@ -23,6 +25,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-02-28",
     category: "Ortodoncija",
     readTime: 7,
+    image: "/images/FUJI6440.jpg",
   },
   {
     slug: "implantat-ili-krunica",
@@ -31,5 +34,6 @@ export const blogPosts: BlogPost[] = [
     date: "2025-03-10",
     category: "Implantologija",
     readTime: 8,
+    image: "/images/FUJI6402.jpg",
   },
 ];
