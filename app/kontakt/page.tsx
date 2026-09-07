@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import { MapPin, Phone, Clock, ParkingCircle, ArrowRight } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Kontakt – Hilandarska 10, Stari Grad, Beograd",
+  description:
+    "Kontaktirajte Hildent: Hilandarska 10, Stari Grad, Beograd. Telefon +381 65 32 23 093, online zakazivanje 24/7, obezbeđen parking. Pon–Pet 09–20h, Sub 09–15h.",
+  alternates: { canonical: "/kontakt" },
+};
 
 function InstagramIcon({ size = 18 }: { size?: number }) {
   return (

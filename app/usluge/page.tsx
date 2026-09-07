@@ -1,108 +1,17 @@
-"use client";
+import type { Metadata } from "next";
 import OrbitDecor from "@/components/OrbitDecor";
-import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { serviceCategories } from "@/data/services";
+import ServicesAccordionList from "@/components/ServicesAccordionList";
 import Image from "next/image";
-import { ChevronDown, ChevronUp, ArrowRight, Clock } from "lucide-react";
+import { ArrowRight, Clock } from "lucide-react";
 
-function formatPrice(price: number) {
-  return price.toLocaleString("sr-RS") + " rsd";
-}
-
-function ServiceAccordion({ category }: { category: typeof serviceCategories[0] }) {
-  const [open, setOpen] = useState(false);
-
-  return (
-    <div
-      className="rounded-xl overflow-hidden transition-all duration-300"
-      style={{
-        background: "#fff",
-        boxShadow: open ? "var(--shadow-md)" : "var(--shadow-sm)",
-        border: open ? "1.5px solid #D4EBF0" : "1.5px solid transparent",
-      }}
-    >
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between p-6 text-left transition-colors duration-200"
-        style={{ background: open ? "#F0F8FA" : "transparent" }}
-      >
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3">
-            <h3 className="font-semibold text-base" style={{ color: "#1A1A1A" }}>
-              {category.title}
-            </h3>
-            {category.comingSoon && (
-              <span
-                className="text-xs font-semibold px-2 py-0.5 rounded-full"
-                style={{ background: "#f9a11b", color: "#fff" }}
-              >
-                Uskoro
-              </span>
-            )}
-          </div>
-        </div>
-        <div className="flex items-center gap-3 shrink-0 ml-4">
-          {!category.comingSoon && (
-            <span className="text-xs font-medium hidden sm:block" style={{ color: "#6B6B6B" }}>
-              {category.items.length} usluga
-            </span>
-          )}
-          {open ? (
-            <ChevronUp size={18} style={{ color: "#008cb2" }} />
-          ) : (
-            <ChevronDown size={18} style={{ color: "#6B6B6B" }} />
-          )}
-        </div>
-      </button>
-
-      {open && !category.comingSoon && (
-        <div className="px-6 pb-6">
-          <p className="text-sm mb-4" style={{ color: "#6B6B6B" }}>
-            {category.description}
-          </p>
-          <div className="flex flex-col divide-y" style={{ borderColor: "#D4EBF0" }}>
-            {category.items.map((item) => (
-              <div
-                key={item.name}
-                className="flex items-center justify-between py-3 gap-4"
-              >
-                <span className="text-sm" style={{ color: "#2C2C2C" }}>
-                  {item.name}
-                </span>
-                <span
-                  className="text-sm font-semibold shrink-0"
-                  style={{ color: "#008cb2" }}
-                >
-                  {formatPrice(item.price)}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {open && category.comingSoon && (
-        <div className="px-6 pb-6">
-          <p className="text-sm" style={{ color: "#6B6B6B" }}>
-            Ova usluga je u pripremi. Pratite naš{" "}
-            <a
-              href="https://www.instagram.com/hildent10/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium hover:underline"
-              style={{ color: "#008cb2" }}
-            >
-              Instagram
-            </a>{" "}
-            za više informacija.
-          </p>
-        </div>
-      )}
-    </div>
-  );
-}
+export const metadata: Metadata = {
+  title: "Usluge i cenovnik – stomatolog centar Beograda",
+  description:
+    "Cenovnik stomatoloških usluga u Hildentu (Hilandarska 10, Stari Grad, Beograd): implantologija, Invisalign, protetika, estetska i opšta stomatologija, oralna hirurgija. Transparentne cene.",
+  alternates: { canonical: "/usluge" },
+};
 
 export default function UslugePage() {
   return (
@@ -117,7 +26,7 @@ export default function UslugePage() {
         <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
-            <div>
+            <div className="reveal">
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Cenovnik i usluge
               </span>
@@ -133,19 +42,19 @@ export default function UslugePage() {
               </p>
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm"
-                style={{ background: "rgba(249,161,27,0.1)", color: "#C77E00" }}
+                style={{ background: "rgba(249,161,27,0.12)", color: "#C77E00" }}
               >
                 <Clock size={14} />
                 Cene su informativne. Tačna cena se utvrđuje na pregledu.
               </div>
             </div>
             <div
-              className="relative rounded-2xl overflow-hidden aspect-[4/5]"
+              className="relative rounded-2xl overflow-hidden aspect-[4/5] reveal"
               style={{ boxShadow: "var(--shadow-lg)" }}
             >
               <Image
                 src="/images/FUJI6433.jpg"
-                alt="Estetska stomatologija — odabir nijanse zuba"
+                alt="Estetska stomatologija — odabir nijanse zuba u Hildentu, Stari Grad"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
@@ -159,11 +68,7 @@ export default function UslugePage() {
       {/* SERVICES ACCORDION */}
       <section className="py-16 pb-24" style={{ background: "#fff" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <div className="flex flex-col gap-4">
-            {serviceCategories.map((cat) => (
-              <ServiceAccordion key={cat.id} category={cat} />
-            ))}
-          </div>
+          <ServicesAccordionList />
         </div>
       </section>
 

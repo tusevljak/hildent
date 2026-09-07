@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, CheckCircle, MapPin, Phone } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "O nama – Dr Igor Bratić, stomatolog na Starom gradu",
+  description:
+    "Upoznajte Hildent — stomatološku ordinaciju Dr Igora Bratića u centru Beograda (Hilandarska 10, Stari Grad). Iskustvo, savremena oprema i individualan pristup svakom pacijentu.",
+  alternates: { canonical: "/o-nama" },
+};
 
 const values = [
   {

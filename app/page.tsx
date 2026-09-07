@@ -185,7 +185,7 @@ export default function HomePage() {
       <section className="py-24 relative overflow-hidden" style={{ background: "#fff" }}>
         <OrbitDecor className="top-[-160px] right-[-160px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16 relative z-10">
-          <div className="mb-12">
+          <div className="mb-12 reveal">
             <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
               Šta nudimo
             </span>
@@ -194,7 +194,7 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
             {featuredServices.map((s) => (
               <div
                 key={s.title}
@@ -338,7 +338,7 @@ export default function HomePage() {
 
           {/* Dečiji ugao — Mali istraživači svemira */}
           <div
-            className="mt-20 rounded-3xl overflow-hidden relative p-8 lg:p-14"
+            className="mt-20 rounded-3xl overflow-hidden relative p-8 lg:p-14 reveal"
             style={{ background: "linear-gradient(120deg, #4b53a2 0%, #008cb2 100%)" }}
           >
             {/* orbita deko */}
@@ -373,7 +373,7 @@ export default function HomePage() {
       <section className="py-24 relative overflow-hidden" style={{ background: "#fff" }}>
         <OrbitDecor flip className="bottom-[-180px] left-[-160px] w-[540px] h-[540px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16 relative z-10">
-          <div className="flex flex-wrap items-end justify-between gap-4 mb-12">
+          <div className="flex flex-wrap items-end justify-between gap-4 mb-12 reveal">
             <div>
               <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Iskustva pacijenata
@@ -399,7 +399,7 @@ export default function HomePage() {
       <section className="py-20 relative overflow-hidden" style={{ background: "#008cb2" }}>
         <OrbitDecor tone="white" className="top-[-140px] right-[-120px] w-[440px] h-[440px]" />
         <OrbitDecor tone="white" flip className="bottom-[-160px] left-[-120px] w-[440px] h-[440px]" />
-        <div className="max-w-content mx-auto px-6 lg:px-16 text-center relative z-10">
+        <div className="max-w-content mx-auto px-6 lg:px-16 text-center relative z-10 reveal">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Vaš osmeh zaslužuje pažnju
           </h2>

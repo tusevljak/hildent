@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ReviewsSlider from "@/components/ReviewsSlider";
 import Image from "next/image";
 import { Star, ExternalLink } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Recenzije pacijenata – iskustva iz Hildenta",
+  description:
+    "Iskustva pacijenata stomatološke ordinacije Hildent (Stari Grad, Beograd). Pročitajte recenzije o implantologiji, Invisalign terapiji, estetskoj i opštoj stomatologiji.",
+  alternates: { canonical: "/recenzije" },
+};
 
 export default function RecenzijePage() {
   return (
