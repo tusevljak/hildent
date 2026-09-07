@@ -3,8 +3,8 @@ import Footer from "@/components/layout/Footer";
 import OrbitDecor from "@/components/OrbitDecor";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Clock, ParkingCircle, Star, ArrowRight, CheckCircle } from "lucide-react";
-import { reviews } from "@/data/reviews";
+import { MapPin, Phone, Clock, ParkingCircle, ArrowRight, CheckCircle } from "lucide-react";
+import ReviewsSlider from "@/components/ReviewsSlider";
 
 const featuredServices = [
   {
@@ -391,30 +391,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.slice(0, 3).map((r) => (
-              <div
-                key={r.id}
-                className="rounded-xl p-6"
-                style={{ background: "#F0F8FA", boxShadow: "var(--shadow-sm)" }}
-              >
-                <div className="flex gap-0.5 mb-3">
-                  {Array.from({ length: r.rating }).map((_, i) => (
-                    <Star key={i} size={14} fill="#f9a11b" style={{ color: "#f9a11b" }} />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: "#2C2C2C" }}>
-                  &ldquo;{r.text}&rdquo;
-                </p>
-                <div>
-                  <p className="text-sm font-semibold" style={{ color: "#1A1A1A" }}>{r.name}</p>
-                  {r.service && (
-                    <p className="text-xs mt-0.5" style={{ color: "#008cb2" }}>{r.service}</p>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewsSlider />
         </div>
       </section>
 

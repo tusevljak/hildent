@@ -1,14 +1,9 @@
 import OrbitDecor from "@/components/OrbitDecor";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { reviews } from "@/data/reviews";
+import ReviewsSlider from "@/components/ReviewsSlider";
 import Image from "next/image";
 import { Star, ExternalLink } from "lucide-react";
-
-function formatDate(dateStr: string) {
-  const d = new Date(dateStr);
-  return d.toLocaleDateString("sr-RS", { day: "numeric", month: "long", year: "numeric" });
-}
 
 export default function RecenzijePage() {
   return (
@@ -78,39 +73,7 @@ export default function RecenzijePage() {
       {/* REVIEWS GRID */}
       <section className="py-16 pb-24" style={{ background: "#fff" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {reviews.map((r) => (
-              <div
-                key={r.id}
-                className="rounded-xl p-6 flex flex-col gap-4"
-                style={{ background: "#F0F8FA", boxShadow: "var(--shadow-sm)" }}
-              >
-                <div className="flex gap-0.5">
-                  {Array.from({ length: r.rating }).map((_, i) => (
-                    <Star key={i} size={14} fill="#f9a11b" style={{ color: "#f9a11b" }} />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed flex-1" style={{ color: "#2C2C2C" }}>
-                  &ldquo;{r.text}&rdquo;
-                </p>
-                <div className="flex items-end justify-between">
-                  <div>
-                    <p className="text-sm font-semibold" style={{ color: "#1A1A1A" }}>{r.name}</p>
-                    <div className="flex items-center gap-2 mt-0.5">
-                      {r.service && (
-                        <span className="text-xs font-medium" style={{ color: "#008cb2" }}>
-                          {r.service}
-                        </span>
-                      )}
-                      <span className="text-xs" style={{ color: "#6B6B6B" }}>
-                        · {formatDate(r.date)}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ReviewsSlider />
         </div>
       </section>
 
