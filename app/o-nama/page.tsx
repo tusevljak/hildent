@@ -87,7 +87,7 @@ export default function ONamaPage() {
               style={{ boxShadow: "var(--shadow-lg)" }}
             >
               <Image
-                src="/images/DSCF3888.jpg"
+                src="/images/o-nama-2.jpg"
                 alt="Dr Igor Bratić — specijalista stomatologije, Hildent Beograd"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
