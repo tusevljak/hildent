@@ -45,8 +45,35 @@ export default function ReviewsSlider() {
     if (!track) return;
     const card = track.querySelector<HTMLElement>("[data-card]");
     const amount = card ? card.offsetWidth + 24 : track.clientWidth * 0.8;
-    track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    if (dir === 1 && track.scrollLeft + track.clientWidth >= track.scrollWidth - 8) {
+      track.scrollTo({ left: 0, behavior: "smooth" });
+    } else if (dir === -1 && track.scrollLeft <= 8) {
+      track.scrollTo({ left: track.scrollWidth, behavior: "smooth" });
+    } else {
+      track.scrollBy({ left: dir * amount, behavior: "smooth" });
+    }
   }
+
+  // Auto-rotacija u krug (pauza na hover / dodir)
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track || reviews.length < 2) return;
+    let paused = false;
+    const pause = () => (paused = true);
+    const resume = () => (paused = false);
+    track.addEventListener("pointerenter", pause);
+    track.addEventListener("pointerleave", resume);
+    track.addEventListener("pointerdown", pause);
+    const id = setInterval(() => {
+      if (!paused) scrollByCards(1);
+    }, 4000);
+    return () => {
+      clearInterval(id);
+      track.removeEventListener("pointerenter", pause);
+      track.removeEventListener("pointerleave", resume);
+      track.removeEventListener("pointerdown", pause);
+    };
+  }, [reviews.length]);
 
   return (
     <div className="relative">

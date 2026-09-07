@@ -95,7 +95,7 @@ export default function RecenzijePage() {
             Vaše mišljenje nam je izuzetno važno. Pomozite drugima da nas pronađu i ostavite recenziju na Google-u.
           </p>
           <a
-            href="https://g.page/r/hildent/review"
+            href="https://maps.app.goo.gl/5LHrN8GphyaGrJ6i6"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"

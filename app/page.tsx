@@ -3,7 +3,7 @@ import Footer from "@/components/layout/Footer";
 import OrbitDecor from "@/components/OrbitDecor";
 import Link from "next/link";
 import Image from "next/image";
-import { MapPin, Phone, Clock, ParkingCircle, ArrowRight, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Clock, ParkingCircle, ArrowRight, CheckCircle, ExternalLink } from "lucide-react";
 import ReviewsSlider from "@/components/ReviewsSlider";
 
 const featuredServices = [
@@ -392,6 +392,19 @@ export default function HomePage() {
           </div>
 
           <ReviewsSlider />
+
+          <div className="mt-8 flex justify-center">
+            <a
+              href="https://maps.app.goo.gl/5LHrN8GphyaGrJ6i6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold hover:underline"
+              style={{ color: "#008cb2" }}
+            >
+              Pogledaj sve recenzije na Google-u
+              <ExternalLink size={14} />
+            </a>
+          </div>
         </div>
       </section>
 
