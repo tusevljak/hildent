@@ -38,7 +38,7 @@ export default function ONamaPage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Ko smo mi
               </span>
               <h1
@@ -46,7 +46,7 @@ export default function ONamaPage() {
                 style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
               >
                 Hildent –<br />
-                <span style={{ color: "#0095B6" }}>Stomatologija sa dušom</span>
+                <span style={{ color: "#008cb2" }}>Stomatologija sa dušom</span>
               </h1>
               <p className="text-lg font-light leading-relaxed" style={{ color: "#6B6B6B" }}>
                 Hildent stomatološka ordinacija otvorena je sa jednom misijom: pružiti svakom pacijentu onaj nivo brige koji bi poželeli za svoju porodicu. Smestili smo se u centru Beograda, na Hilandarskoj 10, kako bismo bili dostupni svima.
@@ -89,13 +89,13 @@ export default function ONamaPage() {
             </div>
 
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Vaš doktor
               </span>
               <h2 className="text-4xl font-bold mt-2 mb-2" style={{ color: "#1A1A1A" }}>
                 Dr Igor Bratić
               </h2>
-              <p className="text-base font-medium mb-6" style={{ color: "#0095B6" }}>
+              <p className="text-base font-medium mb-6" style={{ color: "#008cb2" }}>
                 Specijalista stomatologije
               </p>
               <p className="text-base leading-relaxed mb-4" style={{ color: "#6B6B6B" }}>
@@ -113,7 +113,7 @@ export default function ONamaPage() {
                   "Individualan pristup svakom pacijentu",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3">
-                    <CheckCircle size={16} style={{ color: "#0095B6" }} />
+                    <CheckCircle size={16} style={{ color: "#008cb2" }} />
                     <span className="text-sm font-medium" style={{ color: "#1A1A1A" }}>{item}</span>
                   </div>
                 ))}
@@ -124,7 +124,7 @@ export default function ONamaPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-                style={{ background: "#F5A800" }}
+                style={{ background: "#f9a11b" }}
               >
                 Zakaži pregled
                 <ArrowRight size={15} />
@@ -151,7 +151,7 @@ export default function ONamaPage() {
               />
             </div>
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Naš tim
               </span>
               <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "#1A1A1A" }}>
@@ -172,8 +172,8 @@ export default function ONamaPage() {
       <section className="py-24" style={{ background: "#F0F8FA" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="text-center mb-12">
-            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
-              Naša filosofija
+            <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
+              Naša filozofija
             </span>
             <h2 className="text-4xl font-bold mt-2" style={{ color: "#1A1A1A" }}>
               Šta nas vodi
@@ -189,7 +189,7 @@ export default function ONamaPage() {
               >
                 <div
                   className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg mb-4"
-                  style={{ background: "#0095B6" }}
+                  style={{ background: "#008cb2" }}
                 >
                   {i + 1}
                 </div>
@@ -210,7 +210,7 @@ export default function ONamaPage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Gde se nalazimo
               </span>
               <h2 className="text-4xl font-bold mt-2 mb-6" style={{ color: "#1A1A1A" }}>
@@ -221,11 +221,11 @@ export default function ONamaPage() {
               </p>
               <div className="flex flex-col gap-4 mb-8">
                 <div className="flex items-center gap-3">
-                  <MapPin size={18} style={{ color: "#0095B6" }} />
+                  <MapPin size={18} style={{ color: "#008cb2" }} />
                   <span className="text-sm font-medium" style={{ color: "#1A1A1A" }}>Hilandarska 10, Beograd (Centar)</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Phone size={18} style={{ color: "#0095B6" }} />
+                  <Phone size={18} style={{ color: "#008cb2" }} />
                   <a href="tel:+381653223093" className="text-sm font-medium hover:underline" style={{ color: "#1A1A1A" }}>
                     +381 65 32 23 093
                   </a>
@@ -234,7 +234,7 @@ export default function ONamaPage() {
               <Link
                 href="/kontakt"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-                style={{ background: "#0095B6" }}
+                style={{ background: "#008cb2" }}
               >
                 Kontaktirajte nas
                 <ArrowRight size={15} />
@@ -258,10 +258,10 @@ export default function ONamaPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20" style={{ background: "#0095B6" }}>
+      <section className="py-20" style={{ background: "#008cb2" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Spremi za vaš osmeh
+            Spremni za vaš osmeh
           </h2>
           <p className="text-base mb-8 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.8)" }}>
             Zakažite pregled i uverite se lično zašto nam pacijenti veruju godinama.
@@ -271,7 +271,7 @@ export default function ONamaPage() {
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5 inline-block"
-            style={{ background: "#F5A800" }}
+            style={{ background: "#f9a11b" }}
           >
             Zakaži pregled →
           </a>

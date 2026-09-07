@@ -1,10 +1,8 @@
-"use client";
 import OrbitDecor from "@/components/OrbitDecor";
-import { useState } from "react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
-import { MapPin, Phone, Clock, ParkingCircle, Send } from "lucide-react";
+import { MapPin, Phone, Clock, ParkingCircle, ArrowRight } from "lucide-react";
 
 function InstagramIcon({ size = 18 }: { size?: number }) {
   return (
@@ -16,30 +14,7 @@ function InstagramIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-const usluge = [
-  "Opšta stomatologija",
-  "Implantologija",
-  "Ortodoncija / Invisalign",
-  "Estetska stomatologija",
-  "Oralna hirurgija",
-  "Ostalo",
-];
-
 export default function KontaktPage() {
-  const [sent, setSent] = useState(false);
-  const [form, setForm] = useState({
-    ime: "", telefon: "", email: "", usluga: "", poruka: "",
-  });
-
-  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
-
-  function handleSubmit(e: React.MouseEvent) {
-    e.preventDefault();
-    setSent(true);
-  }
-
   return (
     <>
       <Navbar />
@@ -53,7 +28,7 @@ export default function KontaktPage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Stupite u kontakt
               </span>
               <h1
@@ -61,10 +36,10 @@ export default function KontaktPage() {
                 style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
               >
                 Kontaktirajte<br />
-                <span style={{ color: "#0095B6" }}>nas</span>
+                <span style={{ color: "#008cb2" }}>nas</span>
               </h1>
               <p className="text-lg font-light leading-relaxed" style={{ color: "#6B6B6B" }}>
-                Tu smo za sva vaša pitanja, konsultacije i zakazivanje. Odgovaramo u najkraćem mogućem roku.
+                Tu smo za sva vaša pitanja, konsultacije i zakazivanje. Najbrže do termina — pozovite nas ili zakažite online.
               </p>
             </div>
             <div
@@ -87,7 +62,7 @@ export default function KontaktPage() {
       {/* CONTENT */}
       <section className="py-16 pb-24" style={{ background: "#fff" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <div className="grid lg:grid-cols-2 gap-16">
+          <div className="grid lg:grid-cols-2 gap-16 items-start">
 
             {/* INFO */}
             <div>
@@ -131,7 +106,7 @@ export default function KontaktPage() {
                   <div key={item.label} className="flex items-start gap-4">
                     <div
                       className="w-10 h-10 rounded-lg flex items-center justify-center shrink-0"
-                      style={{ background: "#F0F8FA", color: "#0095B6" }}
+                      style={{ background: "#F0F8FA", color: "#008cb2" }}
                     >
                       {item.icon}
                     </div>
@@ -171,132 +146,49 @@ export default function KontaktPage() {
               </div>
             </div>
 
-            {/* FORM */}
-            <div>
-              <h2 className="text-2xl font-bold mb-8" style={{ color: "#1A1A1A" }}>
-                Pošaljite upit
-              </h2>
+            {/* CTA */}
+            <div
+              className="relative rounded-2xl overflow-hidden p-8 lg:p-10"
+              style={{ background: "linear-gradient(135deg, #008cb2 0%, #4b53a2 100%)" }}
+            >
+              <OrbitDecor tone="white" className="top-[-120px] right-[-120px] w-[360px] h-[360px]" />
+              <div className="relative z-10">
+                <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#70c9c0" }}>
+                  Zakažite termin
+                </span>
+                <h2 className="text-3xl font-bold text-white mt-2 mb-4">
+                  Najbrže do vašeg osmeha
+                </h2>
+                <p className="text-base leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.85)" }}>
+                  Zakažite pregled online u par klikova — dostupno 24/7 — ili nas jednostavno pozovite u toku radnog vremena. Odgovaramo brzo i pronaći ćemo termin koji vam odgovara.
+                </p>
 
-              {sent ? (
-                <div
-                  className="rounded-xl p-8 text-center"
-                  style={{ background: "#F0F8FA", border: "1.5px solid #D4EBF0" }}
-                >
-                  <div className="text-4xl mb-4">✅</div>
-                  <h3 className="font-bold text-lg mb-2" style={{ color: "#1A1A1A" }}>
-                    Upit je poslat!
-                  </h3>
-                  <p className="text-sm" style={{ color: "#6B6B6B" }}>
-                    Javićemo vam se u najkraćem mogućem roku.
-                  </p>
-                </div>
-              ) : (
-                <div className="flex flex-col gap-5">
-                  {/* Ime */}
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#6B6B6B" }}>
-                      Ime i prezime *
-                    </label>
-                    <input
-                      type="text"
-                      name="ime"
-                      value={form.ime}
-                      onChange={handleChange}
-                      placeholder="Vaše ime i prezime"
-                      className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all"
-                      style={{
-                        background: "#F8F8F8",
-                        border: "1.5px solid #D4EBF0",
-                        color: "#1A1A1A",
-                      }}
-                    />
-                  </div>
-
-                  {/* Telefon + Email */}
-                  <div className="grid sm:grid-cols-2 gap-5">
-                    <div>
-                      <label className="block text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#6B6B6B" }}>
-                        Telefon *
-                      </label>
-                      <input
-                        type="tel"
-                        name="telefon"
-                        value={form.telefon}
-                        onChange={handleChange}
-                        placeholder="06X XXX XXXX"
-                        className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all"
-                        style={{ background: "#F8F8F8", border: "1.5px solid #D4EBF0", color: "#1A1A1A" }}
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#6B6B6B" }}>
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        name="email"
-                        value={form.email}
-                        onChange={handleChange}
-                        placeholder="vasa@email.com"
-                        className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all"
-                        style={{ background: "#F8F8F8", border: "1.5px solid #D4EBF0", color: "#1A1A1A" }}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Usluga */}
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#6B6B6B" }}>
-                      Usluga
-                    </label>
-                    <select
-                      name="usluga"
-                      value={form.usluga}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all appearance-none"
-                      style={{ background: "#F8F8F8", border: "1.5px solid #D4EBF0", color: form.usluga ? "#1A1A1A" : "#6B6B6B" }}
-                    >
-                      <option value="">Izaberite uslugu</option>
-                      {usluge.map((u) => (
-                        <option key={u} value={u}>{u}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  {/* Poruka */}
-                  <div>
-                    <label className="block text-xs font-semibold uppercase tracking-widest mb-2" style={{ color: "#6B6B6B" }}>
-                      Poruka
-                    </label>
-                    <textarea
-                      name="poruka"
-                      value={form.poruka}
-                      onChange={handleChange}
-                      rows={4}
-                      placeholder="Vaša poruka ili pitanje..."
-                      className="w-full px-4 py-3 rounded-lg text-sm outline-none transition-all resize-none"
-                      style={{ background: "#F8F8F8", border: "1.5px solid #D4EBF0", color: "#1A1A1A" }}
-                    />
-                  </div>
-
-                  <button
-                    onClick={handleSubmit}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg font-semibold text-white transition-all hover:-translate-y-0.5 mt-2"
-                    style={{ background: "#F5A800", boxShadow: "0 4px 16px rgba(245,168,0,0.3)" }}
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="http://zakazi.online/hildent"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
+                    style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}
                   >
-                    <Send size={15} />
-                    Pošalji upit
-                  </button>
-
-                  <p className="text-xs text-center" style={{ color: "#6B6B6B" }}>
-                    Ili nas odmah pozovite na{" "}
-                    <a href="tel:+381653223093" className="font-medium hover:underline" style={{ color: "#0095B6" }}>
-                      065 32 23 093
-                    </a>
-                  </p>
+                    Zakaži online
+                    <ArrowRight size={16} />
+                  </a>
+                  <a
+                    href="tel:+381653223093"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-md font-semibold text-white border-2 border-white transition-all hover:bg-white hover:text-teal"
+                  >
+                    <Phone size={16} />
+                    065 32 23 093
+                  </a>
                 </div>
-              )}
+
+                <p className="text-xs mt-6" style={{ color: "rgba(255,255,255,0.7)" }}>
+                  Radno vreme: Pon–Pet 09–20h · Sub 09–15h
+                </p>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

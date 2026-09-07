@@ -24,7 +24,7 @@ export default function RecenzijePage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1.2fr_1fr] gap-12 items-center mb-4">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Iskustva pacijenata
               </span>
               <h1
@@ -32,7 +32,7 @@ export default function RecenzijePage() {
                 style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
               >
                 Šta kažu naši<br />
-                <span style={{ color: "#0095B6" }}>pacijenti</span>
+                <span style={{ color: "#008cb2" }}>pacijenti</span>
               </h1>
             </div>
             <div
@@ -40,7 +40,7 @@ export default function RecenzijePage() {
               style={{ boxShadow: "var(--shadow-lg)" }}
             >
               <Image
-                src="/images/FUJI6461.jpg"
+                src="/images/recenzije-1.jpg"
                 alt="Zadovoljna pacijentkinja nakon tretmana u Hildent ordinaciji"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"
@@ -60,7 +60,7 @@ export default function RecenzijePage() {
               <div>
                 <div className="flex gap-0.5 mb-1">
                   {[1,2,3,4,5].map(i => (
-                    <Star key={i} size={16} fill="#F5A800" style={{ color: "#F5A800" }} />
+                    <Star key={i} size={16} fill="#f9a11b" style={{ color: "#f9a11b" }} />
                   ))}
                 </div>
                 <p className="text-xs font-medium" style={{ color: "#6B6B6B" }}>
@@ -87,7 +87,7 @@ export default function RecenzijePage() {
               >
                 <div className="flex gap-0.5">
                   {Array.from({ length: r.rating }).map((_, i) => (
-                    <Star key={i} size={14} fill="#F5A800" style={{ color: "#F5A800" }} />
+                    <Star key={i} size={14} fill="#f9a11b" style={{ color: "#f9a11b" }} />
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed flex-1" style={{ color: "#2C2C2C" }}>
@@ -98,7 +98,7 @@ export default function RecenzijePage() {
                     <p className="text-sm font-semibold" style={{ color: "#1A1A1A" }}>{r.name}</p>
                     <div className="flex items-center gap-2 mt-0.5">
                       {r.service && (
-                        <span className="text-xs font-medium" style={{ color: "#0095B6" }}>
+                        <span className="text-xs font-medium" style={{ color: "#008cb2" }}>
                           {r.service}
                         </span>
                       )}
@@ -128,7 +128,7 @@ export default function RecenzijePage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-            style={{ background: "#0095B6" }}
+            style={{ background: "#008cb2" }}
           >
             Ostavi recenziju na Google
             <ExternalLink size={15} />

@@ -45,7 +45,6 @@ export default function Footer() {
                 { href: "/o-nama",     label: "O nama" },
                 { href: "/usluge",    label: "Usluge" },
                 { href: "/recenzije", label: "Recenzije" },
-                { href: "/blog",      label: "Blog" },
                 { href: "/kontakt",   label: "Kontakt" },
               ].map((l) => (
                 <li key={l.href}>
@@ -116,10 +115,23 @@ export default function Footer() {
 
         <div className="mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3" style={{ borderTop: "1px solid #CCE8EF" }}>
           <p className="text-xs" style={{ color: "#6B6B6B" }}>
-            © 2025 Hildent stomatološka ordinacija. Sva prava zadržana.
+            © {new Date().getFullYear()} Hildent stomatološka ordinacija. Sva prava zadržana.
           </p>
-          <p className="text-xs" style={{ color: "#6B6B6B" }}>
-            Hilandarska 10, Beograd · Obezbeđen parking
+          <p className="text-xs flex items-center gap-1.5" style={{ color: "#6B6B6B" }}>
+            <span>Hilandarska 10, Beograd · Obezbeđen parking</span>
+            <span aria-hidden>·</span>
+            <span>
+              Made by{" "}
+              <a
+                href="https://ivantusevljak.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium hover:underline"
+                style={{ color: "#008cb2" }}
+              >
+                Studio IT
+              </a>
+            </span>
           </p>
         </div>
       </div>

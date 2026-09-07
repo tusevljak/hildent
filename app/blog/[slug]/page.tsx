@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <Link
             href="/blog"
             className="inline-flex items-center gap-2 text-sm font-medium mb-8 hover:underline"
-            style={{ color: "#0095B6" }}
+            style={{ color: "#008cb2" }}
           >
             <ArrowLeft size={15} />
             Nazad na blog
@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="flex items-center gap-3 mb-4">
             <span
               className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full"
-              style={{ background: "rgba(0,149,182,0.1)", color: "#0095B6" }}
+              style={{ background: "rgba(0,140,178,0.1)", color: "#008cb2" }}
             >
               <Tag size={10} />
               {post.category}
@@ -90,7 +90,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </p>
           <p className="text-base leading-relaxed" style={{ color: "#6B6B6B" }}>
             Za sva pitanja možete nas kontaktirati na broj{" "}
-            <a href="tel:+381653223093" className="font-medium hover:underline" style={{ color: "#0095B6" }}>
+            <a href="tel:+381653223093" className="font-medium hover:underline" style={{ color: "#008cb2" }}>
               065 32 23 093
             </a>{" "}
             ili zakažite pregled putem našeg online sistema.
@@ -102,7 +102,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-              style={{ background: "#F5A800" }}
+              style={{ background: "#f9a11b" }}
             >
               Zakaži pregled →
             </a>

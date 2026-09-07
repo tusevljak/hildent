@@ -23,7 +23,7 @@ export default function BlogPage() {
       >
         <OrbitDecor className="top-[-140px] right-[-140px] w-[560px] h-[560px]" />
         <div className="max-w-content mx-auto px-6 lg:px-16">
-          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+          <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
             Saveti i novosti
           </span>
           <h1
@@ -31,7 +31,7 @@ export default function BlogPage() {
             style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
           >
             Blog<br />
-            <span style={{ color: "#0095B6" }}>ordinacije</span>
+            <span style={{ color: "#008cb2" }}>ordinacije</span>
           </h1>
           <p className="text-lg font-light leading-relaxed max-w-2xl" style={{ color: "#6B6B6B" }}>
             Ostanite informisani o najnovijim trendovima u stomatologiji i saznajte kako da što bolje brinete o svom osmehu.
@@ -63,7 +63,7 @@ export default function BlogPage() {
                   <div className="flex items-center gap-3 mb-3">
                     <span
                       className="inline-flex items-center gap-1 text-xs font-semibold px-2.5 py-1 rounded-full"
-                      style={{ background: "rgba(0,149,182,0.1)", color: "#0095B6" }}
+                      style={{ background: "rgba(0,140,178,0.1)", color: "#008cb2" }}
                     >
                       <Tag size={10} />
                       {post.category}
@@ -89,7 +89,7 @@ export default function BlogPage() {
                     <Link
                       href={`/blog/${post.slug}`}
                       className="inline-flex items-center gap-1 text-xs font-semibold transition-colors hover:underline"
-                      style={{ color: "#0095B6" }}
+                      style={{ color: "#008cb2" }}
                     >
                       Pročitaj više
                       <ArrowRight size={12} />

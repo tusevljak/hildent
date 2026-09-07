@@ -36,7 +36,7 @@ function ServiceAccordion({ category }: { category: typeof serviceCategories[0] 
             {category.comingSoon && (
               <span
                 className="text-xs font-semibold px-2 py-0.5 rounded-full"
-                style={{ background: "#F5A800", color: "#fff" }}
+                style={{ background: "#f9a11b", color: "#fff" }}
               >
                 Uskoro
               </span>
@@ -50,7 +50,7 @@ function ServiceAccordion({ category }: { category: typeof serviceCategories[0] 
             </span>
           )}
           {open ? (
-            <ChevronUp size={18} style={{ color: "#0095B6" }} />
+            <ChevronUp size={18} style={{ color: "#008cb2" }} />
           ) : (
             <ChevronDown size={18} style={{ color: "#6B6B6B" }} />
           )}
@@ -73,7 +73,7 @@ function ServiceAccordion({ category }: { category: typeof serviceCategories[0] 
                 </span>
                 <span
                   className="text-sm font-semibold shrink-0"
-                  style={{ color: "#0095B6" }}
+                  style={{ color: "#008cb2" }}
                 >
                   {formatPrice(item.price)}
                 </span>
@@ -92,7 +92,7 @@ function ServiceAccordion({ category }: { category: typeof serviceCategories[0] 
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium hover:underline"
-              style={{ color: "#0095B6" }}
+              style={{ color: "#008cb2" }}
             >
               Instagram
             </a>{" "}
@@ -118,7 +118,7 @@ export default function UslugePage() {
         <div className="max-w-content mx-auto px-6 lg:px-16">
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
             <div>
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#0095B6" }}>
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "#008cb2" }}>
                 Cenovnik i usluge
               </span>
               <h1
@@ -126,14 +126,14 @@ export default function UslugePage() {
                 style={{ fontSize: "clamp(40px, 6vw, 72px)", color: "#1A1A1A" }}
               >
                 Sve što vaši<br />
-                <span style={{ color: "#0095B6" }}>zubi trebaju</span>
+                <span style={{ color: "#008cb2" }}>zubi trebaju</span>
               </h1>
               <p className="text-lg font-light leading-relaxed mb-8" style={{ color: "#6B6B6B" }}>
                 Od preventivnih pregleda do kompleksnih hirurških zahvata – pružamo kompletnu stomatološku zaštitu pod jednim krovom. Transparentni cenovnik, bez skrivenih troškova.
               </p>
               <div
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm"
-                style={{ background: "rgba(245,168,0,0.1)", color: "#D98F00" }}
+                style={{ background: "rgba(249,161,27,0.1)", color: "#C77E00" }}
               >
                 <Clock size={14} />
                 Cene su informativne. Tačna cena se utvrđuje na pregledu.
@@ -168,7 +168,7 @@ export default function UslugePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-20" style={{ background: "#0095B6" }}>
+      <section className="py-20" style={{ background: "#008cb2" }}>
         <div className="max-w-content mx-auto px-6 lg:px-16 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
             Niste sigurni šta vam treba?
@@ -181,7 +181,7 @@ export default function UslugePage() {
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
-            style={{ background: "#F5A800" }}
+            style={{ background: "#f9a11b" }}
           >
             Zakaži konsultaciju
             <ArrowRight size={15} />
