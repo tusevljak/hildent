@@ -65,7 +65,7 @@ export default function ONamaPage() {
               style={{ boxShadow: "var(--shadow-lg)" }}
             >
               <Image
-                src="/images/DSCF3900.jpg"
+                src="/images/toplina-3.webp"
                 alt="Hildent tim sa pacijentom u ordinaciji"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
