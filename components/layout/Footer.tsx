@@ -19,7 +19,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/brand/logo.svg" alt="HilDent" className="h-20 w-auto mb-5" />
+            <img src="/brand/logo.svg" alt="HilDent" className="h-28 md:h-36 w-auto mb-5" />
             <p className="text-sm leading-relaxed" style={{ color: "#6B6B6B" }}>
               Stomatološka ordinacija Dr Igor Bratić. Savremena stomatologija u centru Beograda.
             </p>
