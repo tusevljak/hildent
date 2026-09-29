@@ -103,8 +103,6 @@ export default function Footer() {
             </ul>
             <a
               href="/zakazivanje"
-              target="_blank"
-              rel="noopener noreferrer"
               className="mt-6 inline-block px-5 py-2.5 rounded-md text-sm font-semibold text-white transition-all hover:-translate-y-0.5"
               style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(249,161,27,0.28)" }}
             >

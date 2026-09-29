@@ -22,8 +22,6 @@ export default function MobileCTA() {
       </a>
       <a
         href="/zakazivanje"
-        target="_blank"
-        rel="noopener noreferrer"
         className="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-white"
         style={{ background: "#f9a11b", boxShadow: "0 4px 14px rgba(249,161,27,0.35)" }}
       >

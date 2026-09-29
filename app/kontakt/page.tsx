@@ -174,8 +174,6 @@ export default function KontaktPage() {
                 <div className="flex flex-col gap-3">
                   <a
                     href="/zakazivanje"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
                     style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}
                   >

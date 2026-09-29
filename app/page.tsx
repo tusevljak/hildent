@@ -102,8 +102,6 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 mb-10">
                 <a
                   href="/zakazivanje"
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
                   style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(249,161,27,0.35)" }}
                 >
@@ -422,8 +420,6 @@ export default function HomePage() {
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="/zakazivanje"
-              target="_blank"
-              rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
               style={{ background: "#f9a11b", boxShadow: "0 4px 16px rgba(0,0,0,0.2)" }}
             >

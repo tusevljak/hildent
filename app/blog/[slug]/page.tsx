@@ -99,8 +99,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="mt-12 pt-8" style={{ borderTop: "1px solid #D4EBF0" }}>
             <a
               href="/zakazivanje"
-              target="_blank"
-              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
               style={{ background: "#f9a11b" }}
             >

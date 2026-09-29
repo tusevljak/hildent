@@ -83,8 +83,6 @@ export default function UslugePage() {
           </p>
           <a
             href="/zakazivanje"
-            target="_blank"
-            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
             style={{ background: "#f9a11b" }}
           >

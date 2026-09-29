@@ -129,8 +129,6 @@ export default function ONamaPage() {
 
               <a
                 href="/zakazivanje"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
                 style={{ background: "#f9a11b" }}
               >
@@ -276,8 +274,6 @@ export default function ONamaPage() {
           </p>
           <a
             href="/zakazivanje"
-            target="_blank"
-            rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5 inline-block"
             style={{ background: "#f9a11b" }}
           >
