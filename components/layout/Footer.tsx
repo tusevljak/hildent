@@ -102,7 +102,7 @@ export default function Footer() {
               </li>
             </ul>
             <a
-              href="http://zakazi.online/hildent"
+              href="/zakazivanje"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 inline-block px-5 py-2.5 rounded-md text-sm font-semibold text-white transition-all hover:-translate-y-0.5"

@@ -128,7 +128,7 @@ export default function ONamaPage() {
               </div>
 
               <a
-                href="http://zakazi.online/hildent"
+                href="/zakazivanje"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
@@ -275,7 +275,7 @@ export default function ONamaPage() {
             Zakažite pregled i uverite se lično zašto nam pacijenti veruju godinama.
           </p>
           <a
-            href="http://zakazi.online/hildent"
+            href="/zakazivanje"
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5 inline-block"

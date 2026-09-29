@@ -21,7 +21,7 @@ export default function MobileCTA() {
         Pozovi
       </a>
       <a
-        href="http://zakazi.online/hildent"
+        href="/zakazivanje"
         target="_blank"
         rel="noopener noreferrer"
         className="flex-1 flex items-center justify-center gap-2 py-3 rounded-lg text-sm font-semibold text-white"

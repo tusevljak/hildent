@@ -82,7 +82,7 @@ export default function UslugePage() {
             Zakažite konsultativni pregled i Dr Bratić će vam preporučiti optimalan plan lečenja.
           </p>
           <a
-            href="http://zakazi.online/hildent"
+            href="/zakazivanje"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"

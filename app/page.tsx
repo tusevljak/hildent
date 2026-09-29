@@ -101,7 +101,7 @@ export default function HomePage() {
 
               <div className="flex flex-wrap gap-4 mb-10">
                 <a
-                  href="http://zakazi.online/hildent"
+                  href="/zakazivanje"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"
@@ -421,7 +421,7 @@ export default function HomePage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="http://zakazi.online/hildent"
+              href="/zakazivanje"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3.5 rounded-md font-semibold text-white transition-all hover:-translate-y-0.5"

@@ -118,7 +118,7 @@ export default function Navbar() {
             065 32 23 093
           </a>
           <a
-            href="http://zakazi.online/hildent"
+            href="/zakazivanje"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-md text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5"
@@ -152,7 +152,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="http://zakazi.online/hildent"
+            href="/zakazivanje"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 px-5 py-3 rounded-md text-sm font-semibold text-white text-center"

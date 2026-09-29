@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://hildent.rs";
-  const routes = ["", "/o-nama", "/usluge", "/recenzije", "/kontakt"];
+  const routes = ["", "/o-nama", "/usluge", "/recenzije", "/kontakt", "/zakazivanje"];
   return routes.map((r) => ({
     url: `${base}${r}`,
     lastModified: new Date(),
