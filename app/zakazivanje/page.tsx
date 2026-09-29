@@ -60,9 +60,9 @@ export default function ZakazivanjePage() {
 
       {/* BOOKING WIDGET */}
       <section className="pb-24" style={{ background: "#fff" }}>
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-3 sm:px-6">
           <div
-            className="rounded-2xl overflow-hidden p-2 sm:p-4"
+            className="rounded-2xl overflow-hidden p-1 sm:p-3"
             style={{ background: "#fff", boxShadow: "var(--shadow-md)", border: "1px solid #D4EBF0" }}
           >
             <div id="qbdent-booker" style={{ minHeight: 640, width: "100%" }} />
